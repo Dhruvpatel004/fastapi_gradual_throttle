@@ -1,0 +1,6 @@
+# Base dependencies for fastapi-gradual-throttle
+# For full project dependencies, see pyproject.toml
+
+fastapi>=0.68
+starlette>=0.20
+pydantic-settings>=2.0

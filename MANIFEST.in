@@ -1,0 +1,8 @@
+include README.md
+include LICENSE
+include requirements.txt
+include pyproject.toml
+recursive-include fastapi_gradual_throttle *.py py.typed
+recursive-include tests *.py
+global-exclude __pycache__
+global-exclude *.py[co]

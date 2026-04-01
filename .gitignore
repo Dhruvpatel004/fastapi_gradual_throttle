@@ -1,0 +1,81 @@
+/.env
+
+/dist/
+# Python cache and artifacts
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+
+# Pytest cache
+.pytest_cache/
+
+# Coverage reports
+.coverage
+htmlcov/
+
+# IDE settings
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# wheel files
+*.whl
+
+# Packaging artifacts
+*.tar.gz
+
+# MyPy
+.mypy_cache/
+
+# Black / Formatting
+.cache/
+
+# Pyright
+pyrightconfig.json
+
+# Pypi upload config
+*.pypirc
+
+# JetBrains IDEs
+*.iml
+
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Virtual environments
+.env/
+.venv/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+upcomming-release-notes.md
+upcoming-release-notes.txt
+upcoming-feat.md
+upcoming_features.md
+
+kt_dev.md
+upcoming_feature_plan.md
