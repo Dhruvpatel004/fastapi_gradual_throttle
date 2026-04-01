@@ -15,7 +15,8 @@ def read_readme():
 
 setup(
     name="fastapi-gradual-throttle",
-    version="1.0.0",
+    use_scm_version=True,
+    setup_requires=["setuptools_scm"],
     description=(
         "FastAPI rate limiting and throttling middleware — gradual delay, "
         "strict 429, combined mode, Redis backend, per-route overrides"

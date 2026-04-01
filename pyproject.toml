@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools>=68", "wheel"]
+requires = ["setuptools>=68", "wheel", "setuptools_scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "fastapi-gradual-throttle"
-version = "1.0.0"
+dynamic = ["version"]
 description = "FastAPI rate limiting and throttling middleware — gradual delay, strict 429, combined mode, Redis backend, per-route overrides"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -97,6 +97,10 @@ line-length = 100
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "N", "UP", "B", "SIM"]
+
+[tool.setuptools_scm]
+version_scheme = "post-release"
+local_scheme = "no-local-version"
 
 [tool.mypy]
 python_version = "3.10"

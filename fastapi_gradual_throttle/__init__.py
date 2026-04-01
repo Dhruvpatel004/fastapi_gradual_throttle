@@ -9,7 +9,12 @@ Provides three throttle modes:
 Supports global, router-level, and per-route configuration.
 """
 
-__version__ = "1.0.0"
+from importlib.metadata import PackageNotFoundError, version
+
+try:
+    __version__ = version("fastapi-gradual-throttle")
+except PackageNotFoundError:  # package not installed (e.g. running from source)
+    __version__ = "0.0.0.dev0"
 
 from .backends.base import BaseBackend
 from .backends.memory import InMemoryBackend
