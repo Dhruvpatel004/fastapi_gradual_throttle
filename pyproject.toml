@@ -5,18 +5,35 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "fastapi-gradual-throttle"
 version = "1.0.0"
-description = "FastAPI middleware for gradual request throttling with configurable delay strategies, strict rate limiting, and per-route overrides"
+description = "FastAPI rate limiting and throttling middleware — gradual delay, strict 429, combined mode, Redis backend, per-route overrides"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
+authors = [
+    {name = "Dhruv Patel", email = "pateldhruvn2004@gmail.com"},
+]
+maintainers = [
+    {name = "Dhruv Patel", email = "pateldhruvn2004@gmail.com"},
+]
 keywords = [
     "fastapi",
     "starlette",
     "middleware",
     "throttling",
     "rate-limiting",
+    "rate-limiter",
     "gradual",
     "delay",
+    "api-throttling",
+    "request-throttling",
+    "fastapi-middleware",
+    "fastapi-rate-limit",
+    "python-rate-limiter",
+    "redis-rate-limit",
+    "token-bucket",
+    "sliding-window",
+    "abuse-prevention",
+    "api-protection",
 ]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
@@ -24,19 +41,30 @@ classifiers = [
     "Framework :: FastAPI",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
     "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Networking",
+    "Typing :: Typed",
 ]
 dependencies = [
     "fastapi>=0.68",
     "starlette>=0.20",
     "pydantic-settings>=2.0",
 ]
+
+[project.urls]
+Homepage = "https://github.com/DhruvSimform/fastapi_gradual_throttle"
+Documentation = "https://github.com/DhruvSimform/fastapi_gradual_throttle#readme"
+Repository = "https://github.com/DhruvSimform/fastapi_gradual_throttle"
+"Bug Tracker" = "https://github.com/DhruvSimform/fastapi_gradual_throttle/issues"
+Changelog = "https://github.com/DhruvSimform/fastapi_gradual_throttle#changelog"
 
 [project.optional-dependencies]
 redis = ["redis>=4.2"]

@@ -14,11 +14,48 @@
 ![Code Style](https://img.shields.io/badge/code%20style-black-black)
 ![Linter](https://img.shields.io/badge/linter-ruff-red)
 
-A FastAPI/Starlette middleware library that provides gradual request throttling with configurable delay strategies. Unlike traditional rate limiting that immediately blocks requests, this library applies progressive delays to slow down excessive requests gracefully — or can operate as a strict rate limiter when you need hard 429 enforcement.
+A **FastAPI rate limiting and throttling middleware** for Python APIs.
+
+This library supports:
+- ✅ **Rate limiting** (strict 429 responses)
+- ✅ **Request throttling** (gradual delay instead of blocking)
+- ✅ **Combined mode** (throttle first, then enforce hard limits)
+
+Unlike traditional rate limiters, it can **slow down requests progressively** instead of immediately blocking them — giving you full control over API traffic.
+
+> Works as both a **rate limiter** and a **throttling middleware** for FastAPI and Starlette applications.
+
+**Keywords:** FastAPI rate limiting, FastAPI throttling, Python rate limiter, API throttling middleware, request rate limiting, Starlette middleware, gradual throttle
+
+---
+
+## Rate Limiting vs Throttling (Supported)
+
+This library supports both **rate limiting** and **throttling**:
+
+| Feature | Behavior |
+|---|---|
+| **Rate Limiting** | Blocks requests with HTTP 429 when limit is exceeded |
+| **Throttling** | Slows down requests with progressive delays |
+| **Combined Mode** | First delays requests, then blocks if abuse continues |
+
+### Modes Available
+
+- **Gradual (Throttling)** → delays requests progressively
+- **Strict (Rate Limiting)** → returns HTTP 429 immediately
+- **Combined** → gradual delay up to a threshold, then hard 429 block
+
+This makes it suitable for:
+- API abuse prevention
+- Fair usage enforcement
+- Protecting login, payment, and search endpoints
+- Public APIs where you want to slow down heavy users, not break them
+
+---
 
 ## Features
 
-- **Three Throttle Modes**: Gradual delay, strict rate-limit (429), or combined (delay + hard cap)
+- **Supports Rate Limiting & Throttling**: Gradual delay, strict 429 rate limiting, or combined mode
 - **Configurable Delay Strategies**: Linear, exponential, or custom delay algorithms
 - **Flexible Key Functions**: Throttle by IP address, user ID, or custom keys
 - **Pluggable Storage Backends**: In-memory (dev) and Redis (production) with atomic operations
