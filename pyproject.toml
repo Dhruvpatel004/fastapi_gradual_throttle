@@ -60,11 +60,11 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/DhruvSimform/fastapi_gradual_throttle"
-Documentation = "https://github.com/DhruvSimform/fastapi_gradual_throttle#readme"
-Repository = "https://github.com/DhruvSimform/fastapi_gradual_throttle"
-"Bug Tracker" = "https://github.com/DhruvSimform/fastapi_gradual_throttle/issues"
-Changelog = "https://github.com/DhruvSimform/fastapi_gradual_throttle#changelog"
+Homepage = "https://github.com/Dhruvpatel004/fastapi_gradual_throttle"
+Documentation = "https://github.com/Dhruvpatel004/fastapi_gradual_throttle#readme"
+Repository = "https://github.com/Dhruvpatel004/fastapi_gradual_throttle"
+"Bug Tracker" = "https://github.com/Dhruvpatel004/fastapi_gradual_throttle/issues"
+Changelog = "https://github.com/Dhruvpatel004/fastapi_gradual_throttle#changelog"
 
 [project.optional-dependencies]
 redis = ["redis>=4.2"]
